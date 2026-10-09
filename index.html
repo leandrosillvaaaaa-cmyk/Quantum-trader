@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI QUANTUM TRADER - Bot Automático Deriv</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Fundo Animado -->
+  <div class="bg-glow"></div>
+
+  <div class="main-container">
+    
+    <!-- Cabeçalho Futurista -->
+    <header class="header-cyber">
+      <div class="logo-area">
+        <span class="ai-badge">AI 4.0</span>
+        <h1>QUANTUM<span>TRADER</span></h1>
+      </div>
+      <div id="statusConexao" class="status-pill status-off">
+        <span class="status-dot"></span>
+        <span id="statusTexto">SISTEMA OFFLINE</span>
+      </div>
+    </header>
+
+    <!-- Painel de Conexão -->
+    <section class="card-glass account-card">
+      <div class="input-grid">
+        <div class="input-box">
+          <label for="accountId">ID DA CONTA</label>
+          <input type="text" id="accountId" placeholder="Ex: VRTC2579316" autocomplete="off">
+        </div>
+        <div class="input-box">
+          <label for="apiToken">TOKEN PAT (DERIV)</label>
+          <input type="password" id="apiToken" placeholder="Cole seu Token de Acesso aqui">
+        </div>
+        <button class="btn-cyber btn-connect" onclick="conectarAPI()">
+          <span>INICIALIZAR CONEXÃO</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Display Central do Dígito (Orbe Futurista) -->
+    <section class="card-glass digit-section">
+      <h2 class="section-title"><span class="pulse-icon"></span> ÚLTIMO DÍGITO (VOLATILITY 100 1S)</h2>
+      
+      <div class="orb-wrapper">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="digit-display">
+          <span id="lastDigit">-</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grade dos Robôs -->
+    <section class="robots-grid">
+      
+      <!-- Card Robô 1 -->
+      <div class="card-glass robot-card robot-under">
+        <div class="robot-header">
+          <div class="robot-icon">🤖</div>
+          <h3>ROBÔ WIN (UNDER 7)</h3>
+        </div>
+        <p class="robot-desc">Algoritmo preditivo de variação estatística. Analisa dígitos 7, 8 ou 9 e executa ordens automáticas com barreira em Abaixo de 7.</p>
+        <div class="stat-badge badge-green">ASSERTIVIDADE: ~85%</div>
+        <button class="btn-cyber btn-green" onclick="iniciarBotUnder7()">ATIVAR ALGORITMO UNDER 7</button>
+      </div>
+
+      <!-- Card Robô 2 -->
+      <div class="card-glass robot-card robot-evenodd">
+        <div class="robot-header">
+          <div class="robot-icon">⚡</div>
+          <h3>ROBÔ PAR / ÍMPAR (95%)</h3>
+        </div>
+        <p class="robot-desc">Mapeamento quântico de fluxo de padrões. Detecta sequências de 3 dígitos pares ou 3 ímpares e entra na inversão de tendência.</p>
+        <div class="stat-badge badge-red">ASSERTIVIDADE: ~95%</div>
+        <button class="btn-cyber btn-red" onclick="iniciarBotEvenOdd()">ATIVAR ALGORITMO PAR/ÍMPAR</button>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
