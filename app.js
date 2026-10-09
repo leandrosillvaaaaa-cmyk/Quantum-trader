@@ -36,7 +36,7 @@ function conectarAPI() {
   console.log('[DERIV] Conectando ao gateway WebSocket...');
 
   try {
-    socket = new WebSocket(`wss://ws.derivws.com/websockets/v3?app_id=${APP_ID}`);
+    const wsUrl = 'wss://ws.derivws.com/websockets/v3?app_id=1089&l=PT';
   } catch (err) {
     console.error('[DERIV] Erro na criação do WebSocket:', err);
     if (statusTexto) statusTexto.innerText = 'ERRO DE CONEXÃO';
